@@ -1,6 +1,8 @@
 header {
-background-color: #631860;
-color: #FFFFFF;
+background-color: rgb(251, 1, 251);
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
 }
 main {
 background-color: #FFFFFF;
