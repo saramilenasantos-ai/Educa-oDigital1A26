@@ -1,0 +1,8 @@
+header {
+background-color: #631860;
+color: #FFFFFF;
+}
+main {
+background-color: #FFFFFF;
+color: #183C63;
+}
