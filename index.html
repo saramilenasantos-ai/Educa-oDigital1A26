@@ -57,26 +57,7 @@
 
     </main>
 
-    <script>
-        const botoes = document.querySelectorAll("button");
+    <script src="script.js"></script>
 
-        botoes.forEach(function (botao) {
-            let curtiu = false;
-
-            botao.addEventListener("click", botaoClicado);
-
-            function botaoClicado() {
-                let texto = botao.querySelector("span");
-
-                if (curtiu === false) {
-                    texto.textContent++;
-                    curtiu = true;
-                } else {
-                    texto.textContent--;
-                    curtiu = false;
-                }
-            }
-        });
-    </script>
 </body>
 </html>
