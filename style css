@@ -1,7 +1,6 @@
 body {
     max-width: 100vw;
 }
-
 header {
     background-color: #f903e8;
     color: #FFFFFF;
