@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
     margin:0;
@@ -7,10 +8,142 @@
 }
 
 body{
-    background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
-    color:white;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    color:#f8fafc;
     min-height:100vh;
-    overflow-x:hidden;
+}
+
+/* Cabeçalho */
+
+header{
+    text-align:center;
+    padding:60px 20px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+header h1{
+    font-size:3rem;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+    color:#cbd5e1;
+}
+
+/* Conteúdo */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    display:grid;
+    gap:35px;
+}
+
+/* Cards */
+
+article{
+    display:flex;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    transition:.4s;
+}
+
+article:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(56,189,248,.35);
+}
+
+/* Imagens */
+
+article img{
+    width:320px;
+    height:250px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+article:hover img{
+    transform:scale(1.08);
+}
+
+/* Texto */
+
+article div{
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+article h2{
+    color:#38bdf8;
+    font-size:1.8rem;
+    margin-bottom:15px;
+}
+
+.artigo-autor{
+    color:#94a3b8;
+    font-size:.95rem;
+    margin-bottom:15px;
+    font-style:italic;
+}
+
+article p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.artigo-fonte{
+    color:#fbbf24;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+/* Botões */
+
+button{
+    margin-top:10px;
+    margin-right:10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:#334155;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+button:first-of-type:hover{
+    background:#ef4444;
+    color:white;
+}
+
+button span{
+    margin-left:5px;
+    font-weight:bold;
+}
+
+/* Barra colorida em cada card */
+
+article::before{
+    content:"";
+    width:8px;
+    background:linear-gradient(#38bdf8,#06b6d4,#3b82f6);
 }
 
 /* Scroll */
@@ -20,211 +153,67 @@ body{
 }
 
 ::-webkit-scrollbar-track{
-    background:#111827;
+    background:#0f172a;
 }
 
 ::-webkit-scrollbar-thumb{
-    background:linear-gradient(#00d4ff,#7c3aed);
-    border-radius:20px;
+    background:#38bdf8;
+    border-radius:10px;
 }
 
-/* HEADER */
-
-header{
-    text-align:center;
-    padding:70px 20px;
-    background:
-    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)),
-    linear-gradient(120deg,#2563eb,#7c3aed,#06b6d4);
-    background-size:300% 300%;
-    animation:gradient 8s infinite alternate;
-    box-shadow:0 15px 40px rgba(0,0,0,.4);
+::-webkit-scrollbar-thumb:hover{
+    background:#0ea5e9;
 }
 
-@keyframes gradient{
+/* Responsivo */
 
-    0%{background-position:left;}
-    100%{background-position:right;}
+@media (max-width:900px){
 
-}
+    article{
+        flex-direction:column;
+    }
 
-header h1{
-    font-size:3.5rem;
-    font-weight:800;
-    letter-spacing:2px;
-    text-shadow:0 0 20px rgba(255,255,255,.3);
-}
+    article img{
+        width:100%;
+        height:250px;
+    }
 
-header p{
-    margin-top:15px;
-    font-size:1.2rem;
-    opacity:.9;
-}
+    article::before{
+        width:100%;
+        height:8px;
+    }
 
-/* MAIN */
+    header h1{
+        font-size:2.2rem;
+    }
 
-main{
-    width:90%;
-    max-width:1200px;
-    margin:50px auto;
-    display:grid;
-    gap:40px;
-}
-
-/* ARTICLE */
-
-article{
-    display:grid;
-    grid-template-columns:320px 1fr;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:25px;
-    overflow:hidden;
-    transition:.4s;
-    position:relative;
-}
-
-article::before{
-    content:"";
-    position:absolute;
-    width:200%;
-    height:5px;
-    background:linear-gradient(90deg,#00d4ff,#7c3aed,#ff0080,#00d4ff);
-    top:0;
-    left:-100%;
-    transition:.8s;
-}
-
-article:hover::before{
-    left:0;
-}
-
-article:hover{
-    transform:translateY(-12px) scale(1.01);
-    box-shadow:0 20px 45px rgba(0,0,0,.45);
-}
-
-/* IMAGE */
-
-article img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.6s;
-}
-
-article:hover img{
-    transform:scale(1.08);
-}
-
-/* CONTENT */
-
-article div{
-    padding:30px;
-    display:flex;
-    flex-direction:column;
-}
-
-article h2{
-    color:#00d4ff;
-    margin-bottom:15px;
-    font-size:1.8rem;
-}
-
-.artigo-autor{
-    color:#b3b3b3;
-    font-size:.95rem;
-    margin-bottom:15px;
-}
-
-article p{
-    line-height:1.7;
-    margin-bottom:15px;
-    color:#ececec;
-}
-
-.artigo-fonte{
-    color:#7dd3fc;
-    font-style:italic;
-    font-size:.9rem;
-}
-
-/* BUTTONS */
-
-button{
-    margin-top:15px;
-    margin-right:10px;
-    border:none;
-    padding:13px 22px;
-    border-radius:50px;
-    cursor:pointer;
-    font-size:1rem;
-    font-weight:600;
-    transition:.3s;
-    color:white;
-}
-
-button:first-of-type{
-    background:linear-gradient(135deg,#ff416c,#ff4b2b);
-}
-
-button:last-of-type{
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
-}
-
-button:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 20px rgba(0,0,0,.35);
-}
-
-button:active{
-    transform:scale(.95);
-}
-
-button span{
-    margin-left:5px;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:900px){
-
-article{
-    grid-template-columns:1fr;
-}
-
-article img{
-    height:260px;
-}
-
-header h1{
-    font-size:2.5rem;
-}
+    article h2{
+        font-size:1.5rem;
+    }
 
 }
 
-@media(max-width:500px){
+@media (max-width:500px){
 
-header{
-    padding:50px 15px;
-}
+    header{
+        padding:40px 15px;
+    }
 
-header h1{
-    font-size:2rem;
-}
+    header h1{
+        font-size:1.8rem;
+    }
 
-article div{
-    padding:20px;
-}
+    header p{
+        font-size:1rem;
+    }
 
-article h2{
-    font-size:1.4rem;
-}
+    article div{
+        padding:18px;
+    }
 
-button{
-    width:100%;
-    margin-right:0;
-}
+    button{
+        width:100%;
+        margin-right:0;
+    }
 
 }
