@@ -46,7 +46,7 @@ main{
 
 article{
     display:flex;
-    background:#1e293b;
+    background:#1b2739;
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,.4);
