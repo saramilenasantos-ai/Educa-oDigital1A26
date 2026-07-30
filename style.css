@@ -2,7 +2,7 @@ body {
     max-width: 100vw;
 }
 header {
-background-color: rgb(20, 103, 104);
+background-color: rgb(104, 20, 93);
 color: #010302;
 text-align: center;
 margin: 0 auto;
@@ -12,8 +12,8 @@ padding: 16px;
     font-weight: bold;
 }
 main {
-background-color: #c8d6d8;
-color: #2da3bb;
+background-color: #f39fc3;
+color: #84275a;
 margin: 0 auto;
     padding: 16px;
     display: flex; 
