@@ -1,7 +1,7 @@
 :root {
-    --cor-primaria: #e41ec0;
+    --cor-primaria: #570347;
     --cor-secundaria: #ecdaea;
-    --cor-fundo: #c905ab;
+    --cor-fundo: #ce08b1;
     --cor-texto: #000000;
     --cor-contraste: #f3eef7;
     --cor-botão: #e709f3;
@@ -14,9 +14,9 @@
 }
 
 .tema-escuro {
-    --cor-primaria: #b22a99;
+    --cor-primaria: #d308ae;
     --cor-secundaria: #ecdaea;
-    --cor-fundo: #b739ad;
+    --cor-fundo: #fea8f7;
     --cor-texto: #0e0c0c;
     --cor-contraste: #d7c7d9;
     --cor-botão: #d30fdd;
