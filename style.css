@@ -1,10 +1,10 @@
 :root {
-    --cor-primaria: #07376b;
-    --cor-secundaria: #3a638e;
+    --cor-primaria: #d6219d;
+    --cor-secundaria: #73036a;
     --cor-fundo: #ffffff;
     --cor-texto: #000000;
     --cor-contraste: #f3eef7;
-    --cor-botão: #f9f9f9;
+    --cor-botão: #e709f3;
 
     --fonte-texto: 'Segoe UI', sans-serif;
 }
@@ -18,8 +18,8 @@
     --cor-secundaria: #f517d8;
     --cor-fundo: #b739ad;
     --cor-texto: #ffffff;
-    --cor-contraste: #162a3e;
-    --cor-botão: #0b2037;
+    --cor-contraste: #d7c7d9;
+    --cor-botão: #310b37;
 }
 
 .tema-escuro a {
